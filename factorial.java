@@ -1,3 +1,4 @@
+//WAP to display the factorial of number given by user.  
 package thursday_lab;
 
 import java.util.Scanner;
