@@ -1,0 +1,87 @@
+package function;
+
+import java.util.Scanner;
+
+public class inher_cal extends inher_fact
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		 int num1,num2,add,substract,multiply,divide;	      
+	      Scanner scanner=new Scanner(System.in);	      
+	      System.out.println("Enter two numbers:");
+	      num1=scanner.nextInt();
+	      num2=scanner.nextInt();
+	      add=num1+num2;
+	      substract=num1-num2;
+	      multiply=num1*num2;
+	      divide=num1/num2;
+	      System.out.println("sum="+ add);
+	      System.out.println("difference="+ substract);
+	      System.out.println("multiply="+ multiply);
+	      System.out.println("divide="+ divide);
+
+	}
+
+}
+-----------------------------------------------------------------------------------------------
+package function;
+
+import java.util.Scanner;
+
+public class inher_fact extends inher_SOD
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		  int i,fact=1,num;
+		  System.out.println("Enter the number to find its factorial");
+		  num=sc.nextInt();
+		  for(i=1;i<=num;i++)
+		  {    
+		      fact=fact*i;    
+		  }    
+		  System.out.println("Factorial of "+num+" is: "+fact);  
+	}
+
+}
+-----------------------------------------------------------------------------------------------
+package function;
+
+import java.util.Scanner;
+
+public class inher_SOD
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		 Scanner scanner=new Scanner(System.in);
+	      int num1,num2,res;
+	      System.out.println("Enter two numbers:");
+	      num1=scanner.nextInt();
+	      num2=scanner.nextInt();
+	      res=num1+num2;
+	      System.out.println("sum="+res);
+
+	}
+ }
+-----------------------------------------------------------------------------------
+package function;
+
+public class Single_inh 
+{
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		inher_cal obj=new inher_cal();
+		obj.sup(args);
+		obj.sup1(args);
+		obj.sup2(args);
+		
+
+	}
+
+}
