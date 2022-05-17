@@ -18,6 +18,6 @@ public class javaprogram4
 
       System.out.println("profit on product="+ res);
      
-      ;
+
      }
 }
