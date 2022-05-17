@@ -1,0 +1,69 @@
+package loop;
+
+import java.util.Scanner;
+
+public class demo extends demo1
+{
+
+	public static void pro(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n3, n4;
+		boolean res5;
+
+		System.out.println("Enter a 1st number:");
+		n3=sc.nextInt();
+		System.out.println("Enter a 2nd number:");
+		n4=sc.nextInt();
+		res5 = (n3>n4)&&(n3>=n4); // res5=boolean variable
+		System.out.println("("+n3+" > "+n4+") Logical AND ("+n3+" >= "+n4+") = "+res5);
+
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------
+package loop;
+
+import java.util.Scanner;
+
+public class demo1
+{
+
+	public static void pro1(String[] args) 
+	{
+		// TODO Auto-generated method stub  
+		Scanner sc=new Scanner(System.in);
+		int n1, n2, res,res2,res3;
+
+		System.out.println("Enter a 1st number:");
+		n1=sc.nextInt();
+		System.out.println("Enter a 2nd number:");
+		n2=sc.nextInt();
+		res = n1 & n2;
+		System.out.println(n1+" bitwise AND "+n2+" = "+res);
+		res2 = n1 | n2;
+		System.out.println(n1+" bitwise OR "+n2+" = "+res2);
+		res3 = n1 ^ n2;
+		System.out.println(n1+" bitwise XOR "+n2+" = "+res3);
+
+		
+
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------
+package loop;
+
+import java.util.Scanner;
+
+public class Sing_inh
+{
+
+	public static void main(String[] args) 
+	{
+		demo obj=new demo();
+		obj.pro(args);
+		
+	}
+}
