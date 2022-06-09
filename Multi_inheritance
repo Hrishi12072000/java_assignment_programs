@@ -1,0 +1,65 @@
+//WAP to reverse to number
+
+package Multi_inher;
+import java.util.*;
+public class Multi1 {
+
+	public static void reverse() 
+	{
+		// TODO Auto-generated method stub
+		int number,reverse= 0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number and display it reverse");
+		number=sc.nextInt();
+		while(number != 0)   
+		{  
+		int r = number % 10;  
+		reverse = reverse * 10 + r;  
+		number = number/10;  
+		}  
+		System.out.println("The reverse of the given number is: " + reverse);
+	}
+
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+//WAP to add sum of digit
+
+package Multi_inher;
+import java.util.*;
+public class Multi2_sod extends Multi1
+{
+
+	public static void Addition()
+	{
+		// TODO Auto-generated method stub
+        Scanner sc=new Scanner(System.in);
+        float n1,n2,res;
+        System.out.println("Enter first number");
+        n1=sc.nextFloat();
+        System.out.println("Enter second number");
+        n2=sc.nextFloat();
+        res=n1+n2;
+        System.out.println("The addition of two number "+n1+" and "+n2+" is:-"+ "\t"+res);
+        
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+// Main class to call the function
+
+package Multi_inher;
+
+public class Multi3 
+{
+  public static void main(String[] args)
+  {
+	  Multi2_sod obj=new Multi2_sod();
+	  obj.Addition();
+	  Multi1 obj1=new Multi1();
+	  obj.reverse();
+
+  }
+}
