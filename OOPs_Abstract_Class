@@ -1,0 +1,57 @@
+//WAP to find Profit or Loss on product and find userinput factorial using interface class and implements that class using abstraction
+
+package Demo;
+
+import java.util.Scanner;
+
+public class Implement_class implements Interface_class
+{
+	  Scanner sc=new Scanner(System.in);
+	  int i,fact=1,num,sp,cp,profit,loss;
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		Implement_class obj=new Implement_class();
+		obj.profit_loss();
+		obj.factorial();
+	}
+    public void profit_loss()
+    {
+       System.out.println("Enter  selling price of your product:");
+       sp=sc.nextInt();
+       System.out.println("Enter cost price of your product:");
+       cp=sc.nextInt();
+       profit=sp-cp;
+       loss=cp-sp;
+       if(sp>cp)
+       {
+       System.out.print("Profit on your product is:-"+profit);
+       }
+       else
+       {
+    	   System.out.print("Loss on product is:- -"+loss+"\n\n");
+       }
+    }
+    public void factorial() 
+    {
+		  System.out.println("Enter the number to find its factorial:");
+		  num=sc.nextInt();
+		  for(i=1;i<=num;i++)
+		  {    
+		      fact=fact*i;    
+		  }    
+		  System.out.println("Factorial of "+num+" is: "+fact);
+    }	
+} 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package Demo;
+
+public interface Interface_class 
+{
+	 public void profit_loss();
+	 public void factorial();
+	 
+    
+}
