@@ -1,0 +1,46 @@
+//WAP to to count area and perimeter by using interface
+
+package thursday_lab;
+
+public interface Lab4 
+{
+	void area();
+    void perimeter();
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package thursday_lab;
+import java.util.*;
+public class Inter_Area_peri implements Lab4
+{
+    static int l,b,Area,Perimeter;
+    static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter two number");
+		Inter_Area_peri obj=new Inter_Area_peri ();
+	    obj.area();
+		//Inter_Area_peri obj=new Inter_Area_peri();
+        obj.perimeter();
+	}
+	public void area() 
+	{
+		//System.out.println("Enter two number");
+    	l=sc.nextInt();
+		b=sc.nextInt();
+		Area=l*b;
+		System.out.println("Area of rectangle "+l+" and "+b+" is :- "+Area);
+	}
+	public void perimeter()
+	{
+		//System.out.println("Enter two number");
+		l=sc.nextInt();
+		b=sc.nextInt();
+		Perimeter=(l*b)*(l*b);
+		System.out.println("Perimeter of rectangle "+l+" and "+b+" is :- "+Perimeter);
+
+	}
+
+}
