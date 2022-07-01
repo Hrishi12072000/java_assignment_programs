@@ -1,0 +1,138 @@
+public class student 
+{	
+	private int roll_no,per;
+	private char gra;
+	int[] marks=new int[5];
+	String name;
+	int pho_no,i,total=0;
+	
+	public void set_roll_no(int newvalue)
+	{
+		roll_no=newvalue;
+	}
+	
+	public int get_roll_no()
+	{
+		return roll_no;
+	}
+	
+	public void set_per(int newvalue)
+	{
+		per=newvalue;
+	}
+	
+	public int get_per()
+	{
+		return per;
+	}
+	public void set_gra(char newval)
+	{
+		gra=newval;
+	}
+	
+	public char get_gra()
+	{
+		return gra;
+	}
+	public void cal_per()
+	{
+		for(i=0;i<5;i++)
+		{
+			total+=marks[i];
+		}
+		per=(total*100)/500;
+	}
+	public void cal_gr()
+	{
+		if(per<=100 && per>=90)
+		{
+			gra='O';
+		}else if(per<=89 && per>=70)
+		{
+			gra='A';
+		}
+		else if(per<=69 && per>=60)
+		{
+			gra='B';
+		}
+		else
+		{
+			gra='F';
+		}
+	}
+}
+
+---------------------------
+
+import java.util.Scanner;
+public class Encapsul2 extends encap1 
+{
+	public static void main(String[] args) 
+  {
+		// TODO Auto-generated method stub
+		accept();		
+	}
+	public static void accept()
+	{
+		int roll,i;
+		student obj=new student();
+		Scanner sc=new Scanner(System.in);
+    
+		System.out.println("Entyer your name");
+		obj.name=sc.next();
+    
+		System.out.println("Enter your roll_No");
+		roll=sc.nextInt();
+		obj.set_roll_no(roll);
+    
+		System.out.println("Enter Marks of 5 Subject");
+		for(i=0;i<5;i++)
+		{
+			obj.marks[i]=sc.nextInt();
+		}
+		obj.cal_per();
+		obj.cal_gr();
+		System.out.println("NAme:"+obj.name);
+		System.out.println("Roll_no"+obj.get_roll_no());
+		System.out.println("Percentage:"+obj.get_per());
+		System.out.println("Grade:"+obj.get_gra());
+		
+		
+	}
+}
+	
+------------------
+
+import java.util.Scanner;
+public class encap1 
+{
+	public static void main(String[] args) 
+  {
+		// TODO Auto-generated method stub		
+		demo();
+	}
+	public static void demo()
+	{
+		int roll,i,per;
+		student obj=new student();
+    
+		Scanner sc=new Scanner(System.in);
+    
+		System.out.println("Entyer your name");
+		obj.name=sc.next();
+    
+		System.out.println("Enter your roll_No");
+		roll=sc.nextInt();
+		obj.set_roll_no(roll);
+    
+		System.out.println("Enter your percentage");
+		per=sc.nextInt();
+		
+    obj.set_per(per);
+		obj.cal_gr();
+		System.out.println("NAme:"+obj.name);
+		System.out.println("Roll_no"+obj.get_roll_no());
+		System.out.println("Grade:"+obj.get_gra());
+		
+	}
+}
