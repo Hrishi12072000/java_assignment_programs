@@ -1,0 +1,43 @@
+//WAP to perform addition, subtraction and multiplication in different different function and calling them in main function
+
+package fnction1;
+import java.util.Scanner;
+public class Function_Main {
+     int num1,num2,res,res1,sum;
+     Scanner sc=new Scanner(System.in);
+     //num1=sc.nextInt();     
+	 //num2=sc.nextInt();
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		System.out.println("Enter two number two perform function");  
+		Function_Main obj=new  Function_Main();
+		obj.add();
+		obj.sub();
+		obj.multi();
+	}
+	public void add()
+	{ 
+		System.out.println("Enter 2 number");	    
+		num1=sc.nextInt();
+		num2=sc.nextInt();
+		sum=num1+num2;
+		System.out.println("Sum of "+num1+" and "+num2+" is:- "+sum);
+	}
+	public void sub()
+	{
+		System.out.println("Enter 2 number");
+		num1=sc.nextInt();
+		num2=sc.nextInt();
+		res=num1-num2;
+		System.out.println("Sub of "+num1+" and "+num2+"  is:- "+res);
+	}
+	public void multi()
+	{
+		System.out.println("Enter 2 number");
+		num1=sc.nextInt();
+		num2=sc.nextInt();
+		res1=num1*num2;
+		System.out.println("multi of "+num1+" and "+num2+" is:- "+res1);
+	}
+}
